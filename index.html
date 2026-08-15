@@ -596,6 +596,44 @@ section { padding: 100px 0; position: relative; }
 .future-card span.mono { font-size: 0.7rem; color: var(--blue); display: block; margin-bottom: 10px; }
 .future-card p { font-size: 0.88rem; color: var(--text-0); font-weight: 500; }
 
+.future-flagship {
+  padding: 36px 32px;
+  text-align: left;
+  margin-bottom: 20px;
+  border-style: solid;
+  position: relative;
+  overflow: hidden;
+}
+.future-flagship::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(157,78,221,0.22), transparent 70%);
+  pointer-events: none;
+}
+.future-flagship .flagship-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.future-flagship h3 { font-size: 1.35rem; }
+.future-flagship p.desc { font-size: 0.95rem; color: var(--text-1); max-width: 640px; margin-bottom: 18px; }
+.badge-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.76rem;
+  color: var(--blue);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
 /* =========================================================
    SERVICES
    ========================================================= */
@@ -1200,11 +1238,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
       <h2>Future Projects</h2>
       <p>What I'm building next.</p>
     </div>
-    <div class="future-grid">
-      <div class="glass future-card reveal">
-        <span class="mono">// next</span>
-        <p>Hargeisa Markets System</p>
+    <div class="glass future-flagship reveal">
+      <div class="flagship-top">
+        <h3>🇸🇴 Hargeisa Markets System</h3>
+        <span class="badge-count">20+ shop systems in progress this month</span>
       </div>
+      <p class="desc">A large-scale marketplace platform designed to bring together all of Hargeisa's merchants and businesses in one place — every shop with its own management system (inventory, sales, orders) plugged into a shared marketplace layer. This is the biggest project on my roadmap, and I'm building it out one shop system at a time — around 20 individual shop management systems are already in preparation this month as the foundation for it.</p>
+    </div>
+
+    <div class="future-grid">
       <div class="glass future-card reveal">
         <span class="mono">// next</span>
         <p>Business Management Systems</p>
